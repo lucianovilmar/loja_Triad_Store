@@ -1,0 +1,245 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Triad & Poseidons E-commerce Design System
+Inspired by ocean depths, digital technology, and Poseidon mythology
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Ocean-inspired backgrounds */
+    --background: 210 25% 98%;
+    --foreground: 220 40% 12%;
+
+    /* Deep ocean cards */
+    --card: 210 30% 96%;
+    --card-foreground: 220 35% 15%;
+
+    /* Surface elements */
+    --popover: 210 25% 98%;
+    --popover-foreground: 220 40% 12%;
+
+    /* Navy blue primary (deep ocean) */
+    --primary: 220 85% 15%;
+    --primary-foreground: 210 40% 98%;
+
+    /* Cyan accents (ocean surface) */
+    --secondary: 190 85% 85%;
+    --secondary-foreground: 220 85% 15%;
+
+    /* Muted ocean tones */
+    --muted: 210 20% 92%;
+    --muted-foreground: 220 25% 45%;
+
+    /* Cyan electric accent */
+    --accent: 190 100% 70%;
+    --accent-foreground: 220 85% 15%;
+
+    /* Warning/error states */
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Borders and inputs */
+    --border: 210 25% 88%;
+    --input: 210 25% 90%;
+    --ring: 190 100% 70%;
+
+    /* Golden highlights */
+    --gold: 45 100% 60%;
+    --gold-foreground: 220 85% 15%;
+
+    /* Ocean depths gradient */
+    --gradient-ocean: linear-gradient(135deg, hsl(220 85% 15%), hsl(190 100% 30%));
+    --gradient-surface: linear-gradient(135deg, hsl(190 100% 70%), hsl(45 100% 60%));
+    --gradient-deep: linear-gradient(180deg, hsl(220 85% 8%), hsl(220 85% 15%));
+
+    /* Animations and effects */
+    --wave-animation: wave 3s ease-in-out infinite;
+    --glow-cyan: 0 0 20px hsl(190 100% 70% / 0.3);
+    --glow-gold: 0 0 20px hsl(45 100% 60% / 0.3);
+    --shadow-ocean: 0 10px 40px hsl(220 85% 15% / 0.2);
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Deep ocean abyss backgrounds */
+    --background: 220 90% 3%;
+    --foreground: 190 80% 90%;
+
+    /* Abyssal cards */
+    --card: 220 80% 6%;
+    --card-foreground: 190 70% 85%;
+
+    /* Dark surface elements */
+    --popover: 220 85% 5%;
+    --popover-foreground: 190 80% 90%;
+
+    /* Neon cyan primary */
+    --primary: 190 100% 70%;
+    --primary-foreground: 220 90% 8%;
+
+    /* Dark ocean secondary */
+    --secondary: 220 60% 20%;
+    --secondary-foreground: 190 100% 70%;
+
+    /* Dark muted tones */
+    --muted: 220 40% 12%;
+    --muted-foreground: 190 30% 60%;
+
+    /* Electric cyan accent */
+    --accent: 190 100% 60%;
+    --accent-foreground: 220 90% 8%;
+
+    /* Dark warning states */
+    --destructive: 0 80% 55%;
+    --destructive-foreground: 190 80% 90%;
+
+    /* Dark borders and inputs */
+    --border: 220 50% 15%;
+    --input: 220 50% 18%;
+    --ring: 190 100% 60%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground transition-colors duration-300;
+  }
+}
+
+@layer components {
+  /* Ocean Wave Animation */
+  @keyframes wave {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(2deg); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+  }
+
+  @keyframes glow {
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
+  }
+
+  /* Hero ocean effects */
+  .ocean-bg {
+    background: var(--gradient-ocean);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ocean-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 50% 50%, hsl(190 100% 70% / 0.1) 0%, transparent 70%);
+    animation: glow 4s ease-in-out infinite;
+  }
+
+  /* Floating animation for elements */
+  .float-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  /* Glowing effects */
+  .glow-cyan {
+    box-shadow: var(--glow-cyan);
+  }
+
+  .glow-gold {
+    box-shadow: var(--glow-gold);
+  }
+
+  /* Ocean depth shadow */
+  .shadow-ocean {
+    box-shadow: var(--shadow-ocean);
+  }
+
+  /* Gradient text effects */
+  .gradient-text-ocean {
+    background: var(--gradient-surface);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Interactive elements */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-ocean);
+  }
+
+  /* Product card animations */
+  .product-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .product-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px hsl(220 85% 15% / 0.3);
+  }
+
+  /* Shopping cart slide animation */
+  .cart-slide-enter {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  .cart-slide-enter-active {
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  .cart-slide-exit {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  .cart-slide-exit-active {
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+}

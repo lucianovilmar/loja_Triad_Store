@@ -1,0 +1,176 @@
+import { Product } from '@/types';
+import tshirtImage from '@/assets/product-tshirt.jpg';
+import hoodieImage from '@/assets/product-hoodie.jpg';
+import backpackImage from '@/assets/product-backpack.jpg';
+import mugImage from '@/assets/product-mug.jpg';
+
+export const products: Product[] = [
+  // Camisetas
+  {
+    id: 'tshirt-poseidon-navy',
+    name: 'Camiseta Poseidon Navy',
+    price: 89.90,
+    image: tshirtImage,
+    category: 'camisetas',
+    description: 'Camiseta premium com design exclusivo do Poseidon em azul marinho. Tecido 100% algodão de alta qualidade.',
+    sizes: ['P', 'M', 'G', 'GG', 'XGG'],
+    colors: ['Navy', 'Preto', 'Branco'],
+    inStock: true,
+  },
+  {
+    id: 'tshirt-triad-cyber',
+    name: 'Camiseta Triad Cyber',
+    price: 89.90,
+    image: tshirtImage,
+    category: 'camisetas',
+    description: 'Camiseta com estampa futurística da marca Triad. Design inspirado em tecnologia oceânica.',
+    sizes: ['P', 'M', 'G', 'GG', 'XGG'],
+    colors: ['Ciano', 'Preto', 'Navy'],
+    inStock: true,
+  },
+  {
+    id: 'tshirt-waves-gold',
+    name: 'Camiseta Waves Gold',
+    price: 94.90,
+    image: tshirtImage,
+    category: 'camisetas',
+    description: 'Camiseta premium com detalhes dourados e ondas estilizadas. Edição limitada.',
+    sizes: ['P', 'M', 'G', 'GG'],
+    colors: ['Dourado', 'Preto', 'Navy'],
+    inStock: true,
+  },
+
+  // Moletons
+  {
+    id: 'hoodie-poseidon-master',
+    name: 'Moletom Poseidon Master',
+    price: 189.90,
+    image: hoodieImage,
+    category: 'moletons',
+    description: 'Moletom premium com capuz e bordado Poseidon. Perfeito para os dias frios.',
+    sizes: ['P', 'M', 'G', 'GG', 'XGG'],
+    colors: ['Navy', 'Preto', 'Cinza'],
+    inStock: true,
+  },
+  {
+    id: 'hoodie-triad-ocean',
+    name: 'Moletom Triad Ocean',
+    price: 199.90,
+    image: hoodieImage,
+    category: 'moletons',
+    description: 'Moletom com tecnologia anti-pilling e design oceânico exclusivo.',
+    sizes: ['P', 'M', 'G', 'GG', 'XGG'],
+    colors: ['Ocean Blue', 'Navy', 'Preto'],
+    inStock: true,
+  },
+
+  // Regatas
+  {
+    id: 'tank-poseidon-summer',
+    name: 'Regata Poseidon Summer',
+    price: 69.90,
+    image: tshirtImage,
+    category: 'regatas',
+    description: 'Regata ideal para o verão com design minimalista do Poseidon.',
+    sizes: ['P', 'M', 'G', 'GG'],
+    colors: ['Branco', 'Navy', 'Ciano'],
+    inStock: true,
+  },
+
+  // Acessórios
+  {
+    id: 'backpack-triad-tech',
+    name: 'Mochila Triad Tech',
+    price: 299.90,
+    image: backpackImage,
+    category: 'mochilas',
+    description: 'Mochila resistente à água com compartimentos para laptop e design tecnológico.',
+    colors: ['Preto', 'Navy', 'Ciano'],
+    inStock: true,
+  },
+  {
+    id: 'cap-poseidon-classic',
+    name: 'Boné Poseidon Classic',
+    price: 79.90,
+    image: tshirtImage,
+    category: 'bones',
+    description: 'Boné clássico com bordado Poseidon. Ajustável e confortável.',
+    colors: ['Navy', 'Preto', 'Branco'],
+    inStock: true,
+  },
+  {
+    id: 'socks-ocean-waves',
+    name: 'Meias Ocean Waves (Kit 3 pares)',
+    price: 49.90,
+    image: tshirtImage,
+    category: 'meias',
+    description: 'Kit com 3 pares de meias com estampa de ondas oceânicas.',
+    colors: ['Misto'],
+    inStock: true,
+  },
+
+  // Utilitários
+  {
+    id: 'mug-poseidon-gold',
+    name: 'Caneca Poseidon Gold',
+    price: 59.90,
+    image: mugImage,
+    category: 'canecas',
+    description: 'Caneca de cerâmica com acabamento dourado e logo Poseidon.',
+    colors: ['Dourado', 'Navy', 'Branco'],
+    inStock: true,
+  },
+  {
+    id: 'bottle-triad-thermal',
+    name: 'Garrafa Térmica Triad',
+    price: 129.90,
+    image: mugImage,
+    category: 'garrafas',
+    description: 'Garrafa térmica de aço inox mantém bebidas na temperatura por 12h.',
+    colors: ['Preto', 'Navy', 'Ciano'],
+    inStock: true,
+  },
+  {
+    id: 'squeeze-ocean-pro',
+    name: 'Squeeze Ocean Pro',
+    price: 79.90,
+    image: mugImage,
+    category: 'squeezes',
+    description: 'Squeeze esportivo com bico especial e design oceânico.',
+    colors: ['Ciano', 'Navy', 'Branco'],
+    inStock: true,
+  },
+  {
+    id: 'mousepad-poseidon-xl',
+    name: 'Mouse Pad Poseidon XL',
+    price: 89.90,
+    image: tshirtImage,
+    category: 'mousepads',
+    description: 'Mouse pad gamer extra grande com base antiderrapante e estampa Poseidon.',
+    colors: ['Preto', 'Navy'],
+    inStock: true,
+  },
+  {
+    id: 'stickers-pack-triad',
+    name: 'Pack Adesivos Triad (10un)',
+    price: 29.90,
+    image: tshirtImage,
+    category: 'adesivos',
+    description: 'Pack com 10 adesivos variados da marca Triad e coleção Poseidons.',
+    colors: ['Misto'],
+    inStock: true,
+  },
+
+  // Jaquetas
+  {
+    id: 'jacket-poseidon-storm',
+    name: 'Jaqueta Poseidon Storm',
+    price: 349.90,
+    image: hoodieImage,
+    category: 'jaquetas',
+    description: 'Jaqueta corta-vento premium com tecnologia impermeável e design Poseidon.',
+    sizes: ['P', 'M', 'G', 'GG'],
+    colors: ['Navy', 'Preto'],
+    inStock: false,
+  },
+];
