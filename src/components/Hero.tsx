@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Waves } from 'lucide-react';
 import heroImageDia from '@/assets/hero-ocean.png';
 import heroImage from '@/assets/hero-ocean.jpg';
+import logoPedra from '@/assets/raw.svg';
 
 interface HeroProps {
   onExploreProducts: () => void;
@@ -42,6 +43,7 @@ export const Hero = ({ onExploreProducts, isDarkMode }: HeroProps) => {
           {/* Main Headline */}
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
             <span className="gradient-text-ocean">Tesouros Forjados</span>
+            <img src={logoPedra} alt="Logo Pedra" className="inline-block w-20 h-20 mx-2" />
             <br />
             <span className="text-foreground">no Reino de Poseidon</span>
           </h1>
