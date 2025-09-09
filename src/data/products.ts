@@ -3,6 +3,11 @@ import tshirtImage from '@/assets/product-tshirt.jpg';
 import hoodieImage from '@/assets/product-hoodie.jpg';
 import backpackImage from '@/assets/product-backpack.jpg';
 import mugImage from '@/assets/product-mug.jpg';
+import produto from '@/assets/produto1.svg';
+import produto2 from '@/assets/produto2.svg';
+import produto4 from '@/assets/produto4.svg';
+import produto5 from '@/assets/produto5.svg';
+import produto6 from '@/assets/produto6.svg';
 
 export const products: Product[] = [
   // Camisetas
@@ -10,7 +15,7 @@ export const products: Product[] = [
     id: 'tshirt-poseidon-navy',
     name: 'Camiseta Poseidon Navy',
     price: 89.90,
-    image: tshirtImage,
+    image: produto,
     category: 'camisetas',
     description: 'Camiseta premium com design exclusivo do Poseidon em azul marinho. Tecido 100% algodão de alta qualidade.',
     sizes: ['P', 'M', 'G', 'GG', 'XGG'],
@@ -21,7 +26,7 @@ export const products: Product[] = [
     id: 'tshirt-triad-cyber',
     name: 'Camiseta Triad Cyber',
     price: 89.90,
-    image: tshirtImage,
+    image: produto2,
     category: 'camisetas',
     description: 'Camiseta com estampa futurística da marca Triad. Design inspirado em tecnologia oceânica.',
     sizes: ['P', 'M', 'G', 'GG', 'XGG'],
@@ -32,7 +37,7 @@ export const products: Product[] = [
     id: 'tshirt-waves-gold',
     name: 'Camiseta Waves Gold',
     price: 94.90,
-    image: tshirtImage,
+    image: produto4,
     category: 'camisetas',
     description: 'Camiseta premium com detalhes dourados e ondas estilizadas. Edição limitada.',
     sizes: ['P', 'M', 'G', 'GG'],
@@ -45,7 +50,7 @@ export const products: Product[] = [
     id: 'hoodie-poseidon-master',
     name: 'Moletom Poseidon Master',
     price: 189.90,
-    image: hoodieImage,
+    image: produto5,
     category: 'moletons',
     description: 'Moletom premium com capuz e bordado Poseidon. Perfeito para os dias frios.',
     sizes: ['P', 'M', 'G', 'GG', 'XGG'],
@@ -56,7 +61,7 @@ export const products: Product[] = [
     id: 'hoodie-triad-ocean',
     name: 'Moletom Triad Ocean',
     price: 199.90,
-    image: hoodieImage,
+    image: produto6,
     category: 'moletons',
     description: 'Moletom com tecnologia anti-pilling e design oceânico exclusivo.',
     sizes: ['P', 'M', 'G', 'GG', 'XGG'],

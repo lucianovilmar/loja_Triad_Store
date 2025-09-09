@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { ShoppingCart, Sun, Moon, Menu, X, Wallet } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import logonovo from '@/assets/Skin_W3_Logo_preto.svg';
+import logonovo from '@/assets/Skin_W3_Logo_semfundo.svg';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 
 interface HeaderProps {
@@ -58,7 +58,7 @@ export const Header = ({ cartItemsCount, onCartOpen, isDarkMode, onThemeToggle }
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <div className="w-10 h-10 bg-gradient-to-br from-accent to-gold rounded-lg flex items-center justify-center shadow-lg">
+          <div className="w-10 h-10 bg-black/80 backdrop-blur-sm rounded-lg flex items-center justify-center shadow-lg">
             <img src={logonovo} alt="Triad Logo" className="w-16 h-16" />
             
           </div>
